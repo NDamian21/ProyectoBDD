@@ -10,7 +10,7 @@ from datetime import date, datetime
 app= Flask(__name__)
 app.config['MYSQL_HOST']='localhost'
 app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']='Veba.2102;2000'
+app.config['MYSQL_PASSWORD']=''
 app.config['MYSQL_DB']='bdd_banco'
 mysql=MySQL(app)
 
