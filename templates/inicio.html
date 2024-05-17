@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBD BANK</title>
+    <style>
+        h1 {
+            font-size: 36px; /* TamaÃ±o del texto */
+            text-align: center; /* AlineaciÃ³n centrada */
+            background-color: red;
+            color:white;
+        }
+        h2 {
+            text-align: center; /* AlineaciÃ³n centrada */
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <h1>RBD BANK</h1>
+    <h2>BIENVENIDO: {{dat.0}}! </h2>
+        <form action="/Inicio" method="post">
+
+            <label style="font-size: 20px;"> Cuenta:</label> {{dat.1}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label style="font-size: 20px;"> Saldo:    </label>  {{dat.2}} <br><br><br>
+        </form>  
+            
+        <form action="/TransferenciaMenu" method="POST" style="display: inline;">
+            <input type="hidden" name="dat" value="{{ dat.1}}">
+            <input type="submit" value="Transferencia">
+        </form>
+
+        <form action="/Historial" method="POST" style="display: inline;">
+            <input type="hidden" name="dat" value="{{ dat.1}}">
+            <input type="submit" value="Historial">
+        </form>
+
+         <form action="{{ url_for('Salir') }}" method="POST" style="display: inline;">
+                <input type="submit" value="Salir">
+         </form>
+
+            
+        </h2>
+
+        
+    </center>
+</body>
+</html>

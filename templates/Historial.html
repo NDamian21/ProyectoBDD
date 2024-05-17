@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBD BANK</title>
+    <style>
+        h1 {
+            font-size: 36px; /* TamaÃ±o del texto */
+            text-align: center; /* AlineaciÃ³n centrada */
+            background-color: red;
+            color:white;
+        }
+        h2 {
+            text-align: center; /* AlineaciÃ³n centrada */
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <h1>RBD BANK</h1>
+    <h2> Historial De Transacciones</h2>
+       <table>
+        <thead>
+            <tr>
+                <td>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>Cuenta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>Transaccion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>Monto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>Fecha&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for h in hs%}
+            <tr>
+                <td>{{h.0}}</td>
+                <td>{{h.1}}</td>
+                <td>{{h.2}}</td>
+                <td>{{h.3}}</td>
+                <td>{{h.4}}</td>
+            </tr>
+
+            {%endfor%}
+        </tbody>
+       </table>
+        </h2>
+    </center>
+</body>
+</html>

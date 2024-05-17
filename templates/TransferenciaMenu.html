@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBD BANK</title>
+    <style>
+        h1 {
+            font-size: 36px; /* TamaÃ±o del texto */
+            text-align: center; /* AlineaciÃ³n centrada */
+            background-color: red;
+            color:white;
+        }
+        h2 {
+            text-align: center; /* AlineaciÃ³n centrada */
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <h1>RBD BANK</h1>
+    <h2>Transferencia</h2>
+        <form action="/TransferenciaCom" method="post">
+            <div class="cuentaDestino">
+                <label> Cuenta Destino:    </label>
+                <input type="text" name="CuentaDestino" placeholder="CuentaDestino" required>
+                <br>
+                <br>
+            </div>
+            <div class="Monto">
+                <label> Monto:</label>
+                <input type="number" name="Monto" placeholder="Monto" required>
+                <br>
+                <br>
+            </div>
+            <div class="Concepto">
+                <label> Concepto:    </label>
+                <input type="text" name="Concepto" placeholder="Concepto" required>
+                <br>
+                <br>
+            </div>
+            <input type="hidden" name="dat" value="{{ dat}}">
+            <input type="submit" value="Transferir"><br>
+            
+        </h2>
+    </center>
+</body>
+</html>
