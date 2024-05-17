@@ -90,7 +90,7 @@ def TransferenciaCom():
                     curst.execute("UPDATE cuenta SET Saldo = Saldo - %s WHERE cuentaid =%s", (Monto,cuenta))
                     curst.execute("UPDATE cuenta SET Saldo = Saldo + %s WHERE cuentaid =%s", (Monto,cuentaDestino))
                     mysql.connection.commit()
-                    return 'bien'
+                    return 'Transaccion exitosa'
                except Exception as e:
                     # Manejar errores
                    return 'error'
